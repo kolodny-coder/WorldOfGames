@@ -4,14 +4,14 @@ pipeline {
     stage("build") {
       steps {
         sh """
-          docker-compose build
+          docker build .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker-compose up
+          docker run
         """
       }
     }
